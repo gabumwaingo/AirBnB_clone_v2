@@ -18,7 +18,7 @@ class HBNBCommand(cmd.Cmd):
     # determines prompt for interactive/non-interactive modes
     prompt = '(hbnb) ' if sys.__stdin__.isatty() else ''
 
-    Classes = {
+    classes = {
                'BaseModel': BaseModel, 'User': User, 'Place': Place,
                'State': State, 'City': City, 'Amenity': Amenity,
                'Review': Review
@@ -121,7 +121,7 @@ class HBNBCommand(cmd.Cmd):
         #splitting the arguments
         args = args.split()
 
-        if args[0] is not HBNBCommand.Classes:
+        if args[0] is not HBNBCommand.classes:
             print("** class doesn't exist **")
             return
         kwargs = {}

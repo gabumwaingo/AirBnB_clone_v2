@@ -37,8 +37,7 @@ class DBStorage:
             results = self.__session.query(State).all()
             results.extend(self.__session.query(City).all())
             results.extend(self.__session.query(Place).all())
-            results.extend(self.__session.query(Review).all())
-        return {f"{type(obj).__name__}.{obj.id}".obj for obj in results}
+        return {f"{type(obj).__name__}.{obj.id}": obj for obj in results}
 
     def new(self, obj):
         """add the object to the current database session"""

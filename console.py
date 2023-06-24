@@ -224,6 +224,9 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
             return
 
+        """converts object set to a dictionary"""
+        objects = dict(objects)
+
         class_objects = [str(v) for k, v in objects.items() if v.__class__.__name__ == args[0]]
         print(class_objects)
 

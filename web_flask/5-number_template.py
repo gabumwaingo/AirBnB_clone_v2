@@ -2,6 +2,7 @@
 """ Starts a flask web app with four routes """
 
 from flask import Flask
+from flask import render_template
 
 
 app = Flask(__name__)

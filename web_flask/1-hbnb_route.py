@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """ Starts a flask web app with two routes """
 
 from flask import Flask
